@@ -3,7 +3,7 @@ const logger = require('morgan');
 const cors = require('cors');
 require('dotenv').config();
 
-const { productsRouter, ordersRouter } = require('./routes');
+const { eventsRouter, productsRouter, ordersRouter } = require('./routes');
 
 const app = express();
 
@@ -13,6 +13,7 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 
+app.use('/api/events', eventsRouter);
 app.use('/api/products', productsRouter);
 app.use('/api/orders', ordersRouter);
 
