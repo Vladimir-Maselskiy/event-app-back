@@ -1,6 +1,9 @@
-const productsRouter = require('./products');
 const eventsRouter = require('./events');
-const ordersRouter = require('./orders');
+const registrationsRouter = require('./registrations');
 const cronRouter = require('./cron');
 
-module.exports = { cronRouter, eventsRouter, productsRouter, ordersRouter };
+module.exports = {
+  cronRouter,
+  eventsRouter,
+  registrationsRouter,
+};
